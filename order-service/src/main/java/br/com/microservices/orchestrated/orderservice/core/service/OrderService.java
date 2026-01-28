@@ -29,9 +29,7 @@ public class OrderService {
                 .builder()
                 .products(orderRequest.getProducts())
                 .createdAt(LocalDateTime.now())
-                .transactionId(
-                        String.format(TRANSACTION_ID_PATTERN, Instant.now().toEpochMilli(), UUID.randomUUID())
-                )
+                .transactionId(generateTransactionId())
                 .build();
         repository.save(order);
         producer.sendEvent(jsonUtil.toJson(createPayload(order)));
@@ -47,5 +45,9 @@ public class OrderService {
                     .createdAt(LocalDateTime.now())
                     .build()
         );
+    }
+
+    private static String generateTransactionId() {
+        return String.format(TRANSACTION_ID_PATTERN, Instant.now().toEpochMilli(), UUID.randomUUID());
     }
 }
