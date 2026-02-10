@@ -43,7 +43,7 @@ public class Validation {
     }
 
     @PreUpdate
-    public void preUpdated() {
+    public void preUpdate() {
         updatedAt = LocalDateTime.now();
     }
 }
