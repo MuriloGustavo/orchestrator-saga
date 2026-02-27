@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrated.productvalidationservice.core.validation;
+package br.com.microservices.orchestrated.productvalidationservice.core.service;
 
 import br.com.microservices.orchestrated.productvalidationservice.config.exception.ValidationException;
 import br.com.microservices.orchestrated.productvalidationservice.core.dto.Event;
@@ -46,7 +46,7 @@ public class ProductValidationService {
         validateProductsInformed(event);
         if (validationRepository.existsByOrderIdAndTransactionId(
                 event.getOrderId(), event.getTransactionId())) {
-            throw new ValidationException("There's another transactionID for this validation.");
+            throw new ValidationException("There's another transactionId for this validation.");
         }
         event.getPayload().getProducts().forEach(product -> {
             validateProductInformed(product);
@@ -59,7 +59,7 @@ public class ProductValidationService {
             throw new ValidationException("Product list is empty.");
         }
         if (isEmpty(event.getPayload().getId()) || isEmpty(event.getPayload().getTransactionId())) {
-            throw new ValidationException("OrderID or TransactionID must be informed.");
+            throw new ValidationException("OrderId or TransactionId must be informed.");
         }
     }
 

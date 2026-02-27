@@ -1,7 +1,7 @@
 package br.com.microservices.orchestrated.productvalidationservice.core.consumer;
 
 import br.com.microservices.orchestrated.productvalidationservice.core.utils.JsonUtil;
-import br.com.microservices.orchestrated.productvalidationservice.core.validation.ProductValidationService;
+import br.com.microservices.orchestrated.productvalidationservice.core.service.ProductValidationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
