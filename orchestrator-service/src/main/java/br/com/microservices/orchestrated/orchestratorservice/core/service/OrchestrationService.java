@@ -1,4 +1,4 @@
-package br.com.microservices.orchestrated.orchestratorservice.core;
+package br.com.microservices.orchestrated.orchestratorservice.core.service;
 
 import br.com.microservices.orchestrated.orchestratorservice.core.dto.Event;
 import br.com.microservices.orchestrated.orchestratorservice.core.dto.History;

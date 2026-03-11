@@ -1,6 +1,6 @@
 package br.com.microservices.orchestrated.orchestratorservice.core.consumer;
 
-import br.com.microservices.orchestrated.orchestratorservice.core.OrchestrationService;
+import br.com.microservices.orchestrated.orchestratorservice.core.service.OrchestrationService;
 import br.com.microservices.orchestrated.orchestratorservice.core.utils.JsonUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
