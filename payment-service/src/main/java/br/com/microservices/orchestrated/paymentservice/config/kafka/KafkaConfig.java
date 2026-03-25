@@ -33,7 +33,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.consumer.auto-offset-reset}")
     private String autoOffsetReset;
 
-    @Value("${spring.kafka.topic.orchestratorTopic}")
+    @Value("${spring.kafka.topic.orchestrator}")
     private String orchestratorTopic;
 
     @Value("${spring.kafka.topic.payment-success}")
